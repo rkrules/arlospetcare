@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+<!-- 🎨 THEME SWITCHER: Change "emerald" to any DaisyUI theme -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Arlo's Pet Care team - experienced, certified, and passionate pet care professionals.">
+    <title>About Us - Arlo's Pet Care</title>
+    
+    <!-- Tailwind CSS + DaisyUI via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles/custom.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar (reused from index.html) -->
+    <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52" id="mobile-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl">
+                <i class="fas fa-paw"></i>
+                <span class="ml-2">Arlo's Pet Care</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html" class="font-semibold">About</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero min-h-[50vh] bg-gradient-to-r from-primary to-secondary">
+        <div class="hero-content text-center">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-bold text-base-100 mb-6">About Arlo's Pet Care</h1>
+                <p class="text-xl text-base-100">Where passion meets professional pet care excellence</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-base-100">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=600&fit=crop" alt="Pet care professional with dogs" class="rounded-lg shadow-xl" />
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Our Story</h2>
+                    <p class="text-lg mb-4">
+                        Arlo's Pet Care was born from a simple belief: every pet deserves love, attention, and professional care while their humans are away. Founded in 2018 by animal lover Arlo Martinez, what started as dog walking for neighbors has grown into the most trusted pet care service in the Metro Area.
+                    </p>
+                    <p class="text-lg mb-4">
+                        Our journey began when Arlo noticed a gap in the market for truly personalized, professional pet care. Too many services treated pets like numbers, rushing through visits without genuine connection. Arlo knew there was a better way – one that prioritized the unique needs and personality of each furry client.
+                    </p>
+                    <p class="text-lg mb-4">
+                        Today, we're proud to serve over 200 families with a dedicated team of certified pet care professionals. Every member of our team shares Arlo's original vision: treating every pet as if they were our own. From daily walks to extended boarding stays, we bring the same level of care, attention, and love that we give to our own pets.
+                    </p>
+                    <p class="text-lg">
+                        What sets us apart isn't just our certifications or insurance (though we have both!) – it's our genuine love for animals and commitment to building lasting relationships with both pets and their families. When you choose Arlo's Pet Care, you're not just hiring a service; you're joining a community of pet lovers who understand that your furry family member deserves nothing but the best.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Credentials & Experience</h2>
+                <p class="text-lg">Professional qualifications you can trust</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="stats shadow bg-base-100">
+                    <div class="stat">
+                        <div class="stat-figure text-primary">
+                            <i class="fas fa-calendar-alt text-4xl"></i>
+                        </div>
+                        <div class="stat-title">In Business</div>
+                        <div class="stat-value text-primary">6+ Years</div>
+                        <div class="stat-desc">Since 2018</div>
+                    </div>
+                </div>
+
+                <div class="stats shadow bg-base-100">
+                    <div class="stat">
+                        <div class="stat-figure text-secondary">
+                            <i class="fas fa-users text-4xl"></i>
+                        </div>
+                        <div class="stat-title">Happy Clients</div>
+                        <div class="stat-value text-secondary">200+</div>
+                        <div class="stat-desc">Families served</div>
+                    </div>
+                </div>
+
+                <div class="stats shadow bg-base-100">
+                    <div class="stat">
+                        <div class="stat-figure text-accent">
+                            <i class="fas fa-paw text-4xl"></i>
+                        </div>
+                        <div class="stat-title">Walks & Visits</div>
+                        <div class="stat-value text-accent">15K+</div>
+                        <div class="stat-desc">Completed</div>
+                    </div>
+                </div>
+
+                <div class="stats shadow bg-base-100">
+                    <div class="stat">
+                        <div class="stat-figure text-primary">
+                            <i class="fas fa-star text-4xl"></i>
+                        </div>
+                        <div class="stat-title">Average Rating</div>
+                        <div class="stat-value text-primary">5.0</div>
+                        <div class="stat-desc">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-8">Certifications & Memberships</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card bg-base-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-certificate text-4xl text-success"></i>
+                                <div>
+                                    <h4 class="card-title text-lg">Pet First Aid & CPR Certified</h4>
+                                    <p>All staff members are certified in pet emergency care</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-shield-alt text-4xl text-success"></i>
+                                <div>
+                                    <h4 class="card-title text-lg">Insured & Bonded</h4>
+                                    <p>Full liability insurance and bonding for your protection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-user-check text-4xl text-success"></i>
+                                <div>
+                                    <h4 class="card-title text-lg">Background Checked</h4>
+                                    <p>All team members undergo thorough background screening</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-graduation-cap text-4xl text-success"></i>
+                                <div>
+                                    <h4 class="card-title text-lg">Professional Pet Sitters Association</h4>
+                                    <p>Proud members of PPSA with ongoing education</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Meet Our Team</h2>
+                <p class="text-lg">Passionate professionals who love what they do</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="card bg-base-200 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar">
+                            <div class="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Arlo Martinez" />
+                            </div>
+                        </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Arlo Martinez</h3>
+                        <p class="badge badge-primary">Founder & Lead Caregiver</p>
+                        <p class="mt-2">With 10+ years of experience, Arlo specializes in high-energy dogs and senior pets. Favorite breed: Golden Retrievers.</p>
+                        <div class="card-actions mt-4">
+                            <div class="flex gap-2">
+                                <i class="fas fa-dog text-primary"></i>
+                                <i class="fas fa-cat text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="card bg-base-200 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar">
+                            <div class="w-32 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
+                                <img src="https://i.pravatar.cc/150?img=45" alt="Maya Johnson" />
+                            </div>
+                        </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Maya Johnson</h3>
+                        <p class="badge badge-secondary">Senior Pet Sitter</p>
+                        <p class="mt-2">Former vet tech with a gentle touch for nervous pets. Specializes in cats and small animals. Favorite: Bunnies!</p>
+                        <div class="card-actions mt-4">
+                            <div class="flex gap-2">
+                                <i class="fas fa-cat text-secondary"></i>
+                                <i class="fas fa-dove text-secondary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="card bg-base-200 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar">
+                            <div class="w-32 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="Carlos Rivera" />
+                            </div>
+                        </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Carlos Rivera</h3>
+                        <p class="badge badge-accent">Dog Walker & Trainer</p>
+                        <p class="mt-2">Certified dog trainer who loves working with reactive and special-needs dogs. Favorite: Pit Bulls & Rescue Mutts.</p>
+                        <div class="card-actions mt-4">
+                            <div class="flex gap-2">
+                                <i class="fas fa-dog text-accent"></i>
+                                <i class="fas fa-heart text-accent"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="card bg-base-200 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar">
+                            <div class="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src="https://i.pravatar.cc/150?img=47" alt="Sophie Chen" />
+                            </div>
+                        </div>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Sophie Chen</h3>
+                        <p class="badge badge-primary">Grooming Specialist</p>
+                        <p class="mt-2">Professional groomer with 8 years experience. Specializes in anxious pets and breed-specific cuts. Favorite: Poodles!</p>
+                        <div class="card-actions mt-4">
+                            <div class="flex gap-2">
+                                <i class="fas fa-cut text-primary"></i>
+                                <i class="fas fa-spa text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-base-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Values</h2>
+                <p class="text-lg">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl">
+                            <i class="fas fa-heart text-error mr-2"></i>
+                            Genuine Love for Animals
+                        </h3>
+                        <p class="text-lg">We don't just work with pets – we love them. Every member of our team is a true animal lover who treats your pets like family.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl">
+                            <i class="fas fa-shield-alt text-success mr-2"></i>
+                            Safety First, Always
+                        </h3>
+                        <p class="text-lg">Your pet's safety is our highest priority. From secure key storage to emergency protocols, we never compromise on security.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl">
+                            <i class="fas fa-comments text-info mr-2"></i>
+                            Clear Communication
+                        </h3>
+                        <p class="text-lg">You'll always know how your pet is doing. We provide detailed updates, photos, and are always available to answer questions.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl">
+                            <i class="fas fa-award text-warning mr-2"></i>
+                            Professional Excellence
+                        </h3>
+                        <p class="text-lg">Continuous training, certifications, and best practices ensure you receive the highest quality pet care services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-base-100">Ready to Join Our Pet Care Family?</h2>
+            <p class="text-xl mb-8 text-base-100">Schedule a complimentary meet-and-greet with our team</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="contact.html" class="btn btn-accent btn-lg">
+                    <i class="fas fa-calendar-check"></i>
+                    Book Meet & Greet
+                </a>
+                <a href="services.html" class="btn btn-outline btn-lg text-base-100 hover:bg-base-100 hover:text-primary">
+                    <i class="fas fa-clipboard-list"></i>
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <div>
+            <div class="text-3xl mb-4">
+                <i class="fas fa-paw text-primary"></i>
+            </div>
+            <p class="font-bold text-xl">Arlo's Pet Care</p>
+            <p>Professional, loving care for your furry family since 2018</p>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <p><i class="fas fa-phone text-primary"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope text-primary"></i> hello@arlospetcare.com</p>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a href="https://facebook.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4 text-sm">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright © 2024 - All rights reserved by Arlo's Pet Care</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

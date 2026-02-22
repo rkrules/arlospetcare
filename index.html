@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+<!-- 🎨 THEME SWITCHER: Change "emerald" to any DaisyUI theme:
+     emerald, cupcake, pastel, light, dark, synthwave, retro, cyberpunk, etc.
+     Full list: https://daisyui.com/docs/themes/ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trusted pet care services - dog walking, pet sitting, boarding, and grooming. Professional, insured, and loving care for your furry family.">
+    <title>Arlo's Pet Care - Loving Pet Care You Can Trust</title>
+    
+    <!-- Tailwind CSS + DaisyUI via CDN (NO BUILD REQUIRED) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Custom styles (optional theme overrides) -->
+    <link rel="stylesheet" href="styles/custom.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52" id="mobile-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl">
+                <i class="fas fa-paw"></i>
+                <span class="ml-2">Arlo's Pet Care</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-semibold">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero min-h-screen bg-gradient-to-r from-primary to-secondary">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="lg:w-1/2">
+                <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=600&fit=crop" alt="Happy dogs playing" class="rounded-lg shadow-2xl" />
+                <div class="flex justify-center gap-4 mt-6">
+                    <div class="badge badge-lg badge-success gap-2">
+                        <i class="fas fa-shield-alt"></i>
+                        Insured & Bonded
+                    </div>
+                    <div class="badge badge-lg badge-success gap-2">
+                        <i class="fas fa-certificate"></i>
+                        Certified Pet Pro
+                    </div>
+                    <div class="badge badge-lg badge-success gap-2">
+                        <i class="fas fa-star"></i>
+                        5-Star Rated
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <h1 class="text-5xl font-bold text-base-100">Loving Pet Care You Can Trust</h1>
+                <p class="py-6 text-xl text-base-100">Daily walks • Overnight stays • Drop-in visits • Grooming</p>
+                <p class="pb-6 text-lg text-base-100">Serving the Greater Metro Area with professional, caring pet services</p>
+                <div class="flex gap-4 flex-wrap">
+                    <a href="contact.html" class="btn btn-accent btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Meet & Greet
+                    </a>
+                    <a href="services.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-clipboard-list"></i>
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-base-200" id="services">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Pet Care Services</h2>
+                <p class="text-lg">Professional care tailored to your pet's needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dog Walking -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-walking text-6xl text-primary"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Dog Walking</h3>
+                        <p>30-60 minute walks tailored to your dog's energy level. GPS tracked routes and photo updates.</p>
+                        <div class="card-actions">
+                            <a href="services.html#dog-walking" class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pet Sitting -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-home text-6xl text-secondary"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Drop-In Visits</h3>
+                        <p>Perfect for cats, small pets, or dogs who prefer their home. Feeding, playtime, and TLC.</p>
+                        <div class="card-actions">
+                            <a href="services.html#drop-in" class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overnight Care -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-moon text-6xl text-accent"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Overnight Boarding</h3>
+                        <p>Your pet stays with us in a loving home environment. Comfortable, safe, and fun!</p>
+                        <div class="card-actions">
+                            <a href="services.html#boarding" class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grooming -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-cut text-6xl text-primary"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Grooming</h3>
+                        <p>Bath, brush, nail trim, and ear cleaning. Your pet will look and feel their best!</p>
+                        <div class="card-actions">
+                            <a href="services.html#grooming" class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pet Transportation -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-car text-6xl text-secondary"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Pet Transportation</h3>
+                        <p>Safe rides to vet appointments, grooming, or doggy daycare. Door-to-door service.</p>
+                        <div class="card-actions">
+                            <a href="services.html#transportation" class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Care -->
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-medkit text-6xl text-accent"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title">Emergency Care</h3>
+                        <p>Last-minute bookings and urgent care available. We're here when you need us most.</p>
+                        <div class="card-actions">
+                            <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Why Choose Arlo's Pet Care?</h2>
+                <p class="text-lg">We go above and beyond for your furry family</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card bg-base-200 shadow-lg">
+                    <div class="card-body items-center text-center">
+                        <i class="fas fa-shield-alt text-5xl text-primary mb-4"></i>
+                        <h3 class="card-title">Insured & Bonded</h3>
+                        <p>Full liability insurance and bonding for your peace of mind</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200 shadow-lg">
+                    <div class="card-body items-center text-center">
+                        <i class="fas fa-map-marked-alt text-5xl text-secondary mb-4"></i>
+                        <h3 class="card-title">GPS Tracked Walks</h3>
+                        <p>Real-time tracking and post-walk reports with route maps</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200 shadow-lg">
+                    <div class="card-body items-center text-center">
+                        <i class="fas fa-camera text-5xl text-accent mb-4"></i>
+                        <h3 class="card-title">Photo Updates</h3>
+                        <p>Receive cute photos and detailed updates after every visit</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200 shadow-lg">
+                    <div class="card-body items-center text-center">
+                        <i class="fas fa-user-md text-5xl text-primary mb-4"></i>
+                        <h3 class="card-title">Vet Trained Staff</h3>
+                        <p>Pet first aid certified with years of animal care experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-base-200" id="testimonials">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">What Pet Parents Say</h2>
+                <p class="text-lg">Don't just take our word for it</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-1 text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"Arlo's team is amazing! Max loves his walks and I get the cutest photos. Can't recommend them enough!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar placeholder">
+                                <div class="bg-primary text-primary-content rounded-full w-12">
+                                    <span>SJ</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold">Sarah Johnson</p>
+                                <p class="text-sm opacity-70">Max's mom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-1 text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"We travel frequently and always trust Arlo's with Bella. She's treated like family!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar placeholder">
+                                <div class="bg-secondary text-secondary-content rounded-full w-12">
+                                    <span>MC</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold">Mike Chen</p>
+                                <p class="text-sm opacity-70">Bella's dad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-1 text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"Professional, caring, and reliable. Luna gets so excited when her walker arrives!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar placeholder">
+                                <div class="bg-accent text-accent-content rounded-full w-12">
+                                    <span>EP</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold">Emily Parker</p>
+                                <p class="text-sm opacity-70">Luna's mom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-1 text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"Best decision ever! Charlie is happier and healthier thanks to his daily walks."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar placeholder">
+                                <div class="bg-primary text-primary-content rounded-full w-12">
+                                    <span>DT</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold">David Thompson</p>
+                                <p class="text-sm opacity-70">Charlie's dad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Service Area</h2>
+                <p class="text-lg">Proudly serving neighborhoods across the Metro Area</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://via.placeholder.com/600x400/10b981/ffffff?text=Service+Area+Map" alt="Service area map" class="rounded-lg shadow-xl" />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">We Serve These Neighborhoods:</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Downtown</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Midtown</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>East Side</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>West End</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>North Hills</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>South District</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Riverside</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Lakefront</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <p class="mb-4">Don't see your neighborhood? <a href="contact.html" class="link link-primary">Contact us</a> - we may be able to accommodate!</p>
+                        <a href="contact.html" class="btn btn-primary">Check Availability</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-base-200" id="faq">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg">Everything you need to know about our services</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                    <input type="checkbox" class="faq-toggle" />
+                    <div class="collapse-title text-xl font-medium">
+                        Are you insured and bonded?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Yes! We carry comprehensive liability insurance and are fully bonded. Your pet's safety and your peace of mind are our top priorities. We can provide proof of insurance upon request.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                    <input type="checkbox" class="faq-toggle" />
+                    <div class="collapse-title text-xl font-medium">
+                        What happens if my pet has an emergency?
+                    </div>
+                    <div class="collapse-content">
+                        <p>All our staff are pet first aid certified. In case of emergency, we'll immediately contact you and your designated emergency contact. If needed, we'll transport your pet to your preferred veterinarian or the nearest emergency animal hospital. We maintain detailed emergency protocols for every pet in our care.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                    <input type="checkbox" class="faq-toggle" />
+                    <div class="collapse-title text-xl font-medium">
+                        How do you handle keys and home access?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Your keys are stored securely in a locked safe with restricted access. Each key is labeled with a code (not your address) for security. We can also use lockboxes, garage codes, or smart lock systems if you prefer. All staff undergo background checks and are trained in security protocols.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                    <input type="checkbox" class="faq-toggle" />
+                    <div class="collapse-title text-xl font-medium">
+                        Can I meet the person who will care for my pet?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Absolutely! We offer complimentary meet-and-greet sessions before your first service. This gives you and your pet the chance to meet your care provider, discuss your pet's routine, and ensure everyone feels comfortable. We believe in building trust and relationships!</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                    <input type="checkbox" class="faq-toggle" />
+                    <div class="collapse-title text-xl font-medium">
+                        What if I need to cancel or reschedule?
+                    </div>
+                    <div class="collapse-content">
+                        <p>We understand plans change! We ask for 24 hours notice for cancellations or rescheduling to avoid fees. Same-day cancellations may incur a 50% charge. For emergencies, we're always flexible - just give us a call and we'll work it out.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                    <input type="checkbox" class="faq-toggle" />
+                    <div class="collapse-title text-xl font-medium">
+                        Do you administer medications?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Yes! We can administer oral medications, topical treatments, and even injections (for diabetic pets, etc.). Just provide clear instructions and we'll follow them exactly. There's no additional charge for basic medication administration. We'll always confirm we've given medications in our visit reports.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-base-100">Ready to Meet Your Pet Sitter?</h2>
+            <p class="text-xl mb-8 text-base-100">Schedule a free meet-and-greet today. No obligation, just love!</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="contact.html" class="btn btn-accent btn-lg">
+                    <i class="fas fa-calendar-check"></i>
+                    Schedule Meet & Greet
+                </a>
+                <a href="tel:555-123-4567" class="btn btn-outline btn-lg text-base-100 hover:bg-base-100 hover:text-primary">
+                    <i class="fas fa-phone"></i>
+                    Call (555) 123-4567
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <div>
+            <div class="text-3xl mb-4">
+                <i class="fas fa-paw text-primary"></i>
+            </div>
+            <p class="font-bold text-xl">Arlo's Pet Care</p>
+            <p>Professional, loving care for your furry family since 2018</p>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <p><i class="fas fa-phone text-primary"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope text-primary"></i> hello@arlospetcare.com</p>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a href="https://facebook.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4 text-sm">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright © 2024 - All rights reserved by Arlo's Pet Care</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

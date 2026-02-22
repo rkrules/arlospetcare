@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+<!-- 🎨 THEME SWITCHER: Change "emerald" to any DaisyUI theme -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive pet care services including dog walking, pet sitting, boarding, grooming, and more. Transparent pricing and flexible options.">
+    <title>Services & Pricing - Arlo's Pet Care</title>
+    
+    <!-- Tailwind CSS + DaisyUI via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles/custom.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52" id="mobile-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl">
+                <i class="fas fa-paw"></i>
+                <span class="ml-2">Arlo's Pet Care</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="font-semibold">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero min-h-[50vh] bg-gradient-to-r from-primary to-secondary">
+        <div class="hero-content text-center">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-bold text-base-100 mb-6">Services & Pricing</h1>
+                <p class="text-xl text-base-100">Transparent pricing for professional pet care services</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dog Walking Section -->
+    <section class="py-20 bg-base-100" id="dog-walking">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-walking text-5xl text-primary"></i>
+                        <h2 class="text-4xl font-bold">Dog Walking</h2>
+                    </div>
+                    <p class="text-lg mb-6">
+                        Professional dog walking services tailored to your pup's energy level and needs. Every walk includes GPS tracking, photo updates, and a detailed report card.
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>30-Minute Walk:</strong> Perfect for low-energy or senior dogs - $25
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>45-Minute Walk:</strong> Our most popular option - $35
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>60-Minute Walk:</strong> For high-energy dogs who need extra exercise - $45
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-star"></i>
+                        <span><strong>Multi-walk discount:</strong> Book 5+ walks per week and save 10%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-2xl mb-4">What's Included:</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-map-marked-alt text-primary mt-1"></i>
+                                    <span>GPS tracked route with map sent after every walk</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-camera text-primary mt-1"></i>
+                                    <span>Photo updates and personalized report card</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-water text-primary mt-1"></i>
+                                    <span>Fresh water provided during walks</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-poop text-primary mt-1"></i>
+                                    <span>Waste cleanup included</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-paw-alt text-primary mt-1"></i>
+                                    <span>Paw wipe-down before returning home</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-home text-primary mt-1"></i>
+                                    <span>Home security check (plants watered, mail retrieved)</span>
+                                </li>
+                            </ul>
+                            <div class="card-actions justify-end mt-6">
+                                <a href="contact.html" class="btn btn-primary btn-block">Book Dog Walking</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drop-In Visits Section -->
+    <section class="py-20 bg-base-200" id="drop-in">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-2xl mb-4">What's Included:</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-utensils text-secondary mt-1"></i>
+                                    <span>Feeding per your instructions (any dietary needs)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-gamepad text-secondary mt-1"></i>
+                                    <span>Playtime, enrichment activities, and attention</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-box text-secondary mt-1"></i>
+                                    <span>Litter box cleaning or waste pickup</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-pills text-secondary mt-1"></i>
+                                    <span>Medication administration (no extra charge)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-seedling text-secondary mt-1"></i>
+                                    <span>Plant watering and mail collection</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-camera text-secondary mt-1"></i>
+                                    <span>Photo updates and visit confirmation</span>
+                                </li>
+                            </ul>
+                            <div class="card-actions justify-end mt-6">
+                                <a href="contact.html" class="btn btn-secondary btn-block">Book Drop-In Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-home text-5xl text-secondary"></i>
+                        <h2 class="text-4xl font-bold">Drop-In Visits</h2>
+                    </div>
+                    <p class="text-lg mb-6">
+                        Perfect for cats, small pets, or dogs who prefer staying home. We'll visit your home to provide care, companionship, and peace of mind while you're away.
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>30-Minute Visit:</strong> Quick check-in for independent pets - $28
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>45-Minute Visit:</strong> Extended playtime and attention - $38
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>60-Minute Visit:</strong> Maximum companionship time - $48
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success">
+                        <i class="fas fa-tag"></i>
+                        <span><strong>Same pet discount:</strong> Multiple visits same day save 15% on 2nd+ visit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overnight Boarding Section -->
+    <section class="py-20 bg-base-100" id="boarding">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-moon text-5xl text-accent"></i>
+                        <h2 class="text-4xl font-bold">Overnight Boarding</h2>
+                    </div>
+                    <p class="text-lg mb-6">
+                        Your pet stays with us in a safe, comfortable home environment. No cages, no kennels – just a loving home away from home with 24/7 supervision.
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>Dog Boarding:</strong> $65 per night (includes 2 walks)
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>Cat Boarding:</strong> $45 per night
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>Small Pets:</strong> $35 per night (rabbits, guinea pigs, etc.)
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-success text-xl mt-1"></i>
+                            <div>
+                                <strong>Additional Pet:</strong> $20 per night (same family)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span><strong>Extended stay discount:</strong> Book 7+ nights and save 15%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-2xl mb-4">What's Included:</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-bed text-accent mt-1"></i>
+                                    <span>Comfortable sleeping area (cozy beds, no crates)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-running text-accent mt-1"></i>
+                                    <span>Multiple walks or play sessions daily</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-utensils text-accent mt-1"></i>
+                                    <span>Meals per your feeding schedule</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-camera text-accent mt-1"></i>
+                                    <span>Daily photo and video updates</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-shield-alt text-accent mt-1"></i>
+                                    <span>24/7 supervision and care</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-heart text-accent mt-1"></i>
+                                    <span>Lots of love, cuddles, and attention</span>
+                                </li>
+                            </ul>
+                            <div class="divider">Optional Add-Ons</div>
+                            <ul class="space-y-2 text-sm">
+                                <li>• Bath & brush before pickup - $30</li>
+                                <li>• Extra long walk (60 min) - $15/day</li>
+                                <li>• Special dietary meals - $5/day</li>
+                            </ul>
+                            <div class="card-actions justify-end mt-6">
+                                <a href="contact.html" class="btn btn-accent btn-block">Book Boarding</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grooming Section -->
+    <section class="py-20 bg-base-200" id="grooming">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-2xl mb-4">Grooming Services:</h3>
+                            <div class="overflow-x-auto">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Basic Bath Package</strong></td>
+                                            <td>$40-60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm pl-8">Bath, blow dry, brush, nail trim</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Full Grooming</strong></td>
+                                            <td>$65-95</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm pl-8">Bath, haircut/styling, nails, ears</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nail Trim Only</strong></td>
+                                            <td>$15</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Teeth Brushing</strong></td>
+                                            <td>$10</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>De-shedding Treatment</strong></td>
+                                            <td>$20</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Flea/Tick Treatment</strong></td>
+                                            <td>$15</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-sm mt-4 opacity-70">*Prices vary by size and coat condition</p>
+                            <div class="card-actions justify-end mt-6">
+                                <a href="contact.html" class="btn btn-primary btn-block">Book Grooming</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-cut text-5xl text-primary"></i>
+                        <h2 class="text-4xl font-bold">Grooming Services</h2>
+                    </div>
+                    <p class="text-lg mb-6">
+                        Professional grooming in a calm, stress-free environment. Perfect for anxious pets who need extra patience and care. We use only premium, pet-safe products.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-spa text-primary text-xl mt-1"></i>
+                            <div>
+                                <strong>Gentle Approach:</strong> We take our time with nervous or senior pets
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-leaf text-primary text-xl mt-1"></i>
+                            <div>
+                                <strong>Premium Products:</strong> Hypoallergenic, eco-friendly shampoos
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-home text-primary text-xl mt-1"></i>
+                            <div>
+                                <strong>Home Grooming Available:</strong> For pets who can't travel
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-certificate text-primary text-xl mt-1"></i>
+                            <div>
+                                <strong>Certified Groomers:</strong> 8+ years experience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Transportation Section -->
+    <section class="py-20 bg-base-100" id="transportation">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <i class="fas fa-car text-5xl text-secondary"></i>
+                    <h2 class="text-4xl font-bold">Pet Transportation</h2>
+                </div>
+                <p class="text-lg">Safe, comfortable rides for your pet wherever they need to go</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title">Vet Appointments</h3>
+                        <p>Door-to-door service to veterinary appointments. We'll wait with your pet and bring them home safely.</p>
+                        <div class="divider"></div>
+                        <p class="text-2xl font-bold text-secondary">$35 per trip</p>
+                        <p class="text-sm">(within 10 miles, +$2/mile beyond)</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title">Grooming & Daycare</h3>
+                        <p>Pickup and drop-off service for grooming appointments, doggy daycare, or other pet-related destinations.</p>
+                        <div class="divider"></div>
+                        <p class="text-2xl font-bold text-secondary">$30 per trip</p>
+                        <p class="text-sm">(within 10 miles, +$2/mile beyond)</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title">Emergency Transport</h3>
+                        <p>24/7 emergency transportation to veterinary hospitals when every minute counts.</p>
+                        <div class="divider"></div>
+                        <p class="text-2xl font-bold text-secondary">$50 flat rate</p>
+                        <p class="text-sm">(priority response, any distance)</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title">Airport Service</h3>
+                        <p>Pet sitting at your home + airport pickup/drop-off for you. Your pet never has to leave home!</p>
+                        <div class="divider"></div>
+                        <p class="text-2xl font-bold text-secondary">Custom Quote</p>
+                        <p class="text-sm">(based on duration and services)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Deals Section -->
+    <section class="py-20 bg-base-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Package Deals & Discounts</h2>
+                <p class="text-lg">Save more with our bundled services</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-base-100 shadow-xl border-2 border-success">
+                    <div class="card-body text-center">
+                        <div class="badge badge-success gap-2 mx-auto">
+                            <i class="fas fa-tag"></i>
+                            Best Value
+                        </div>
+                        <h3 class="card-title justify-center text-2xl mt-2">Weekly Walker</h3>
+                        <p class="text-3xl font-bold text-success my-4">Save 10%</p>
+                        <p>Book 5+ walks per week</p>
+                        <div class="divider"></div>
+                        <ul class="text-left space-y-2">
+                            <li>✓ Consistent schedule</li>
+                            <li>✓ Same walker</li>
+                            <li>✓ Priority booking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body text-center">
+                        <h3 class="card-title justify-center text-2xl">Vacation Package</h3>
+                        <p class="text-3xl font-bold text-primary my-4">Save 15%</p>
+                        <p>7+ night boarding stays</p>
+                        <div class="divider"></div>
+                        <ul class="text-left space-y-2">
+                            <li>✓ Daily photo updates</li>
+                            <li>✓ Extra playtime</li>
+                            <li>✓ Free bath & brush</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body text-center">
+                        <h3 class="card-title justify-center text-2xl">Multi-Pet</h3>
+                        <p class="text-3xl font-bold text-accent my-4">Save 20%</p>
+                        <p>On 2nd+ pet same family</p>
+                        <div class="divider"></div>
+                        <ul class="text-left space-y-2">
+                            <li>✓ Any services</li>
+                            <li>✓ Stackable discounts</li>
+                            <li>✓ All pets included</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info mt-8">
+                <i class="fas fa-gift"></i>
+                <div>
+                    <strong>New Client Special:</strong> 25% off your first service! Use code HELLO25 at booking.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-base-100">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 text-base-100">Book your first service today and see why pet parents love us!</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="contact.html" class="btn btn-accent btn-lg">
+                    <i class="fas fa-calendar-check"></i>
+                    Book Now
+                </a>
+                <a href="index.html#faq" class="btn btn-outline btn-lg text-base-100 hover:bg-base-100 hover:text-primary">
+                    <i class="fas fa-question-circle"></i>
+                    Have Questions?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <div>
+            <div class="text-3xl mb-4">
+                <i class="fas fa-paw text-primary"></i>
+            </div>
+            <p class="font-bold text-xl">Arlo's Pet Care</p>
+            <p>Professional, loving care for your furry family since 2018</p>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <p><i class="fas fa-phone text-primary"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope text-primary"></i> hello@arlospetcare.com</p>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a href="https://facebook.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4 text-sm">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright © 2024 - All rights reserved by Arlo's Pet Care</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

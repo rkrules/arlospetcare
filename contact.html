@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+<!-- 🎨 THEME SWITCHER: Change "emerald" to any DaisyUI theme -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Arlo's Pet Care - Schedule a meet-and-greet or book pet care services. We're here to help!">
+    <title>Contact Us - Arlo's Pet Care</title>
+    
+    <!-- Tailwind CSS + DaisyUI via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles/custom.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52" id="mobile-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl">
+                <i class="fas fa-paw"></i>
+                <span class="ml-2">Arlo's Pet Care</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html" class="font-semibold">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="tel:555-123-4567" class="btn btn-primary">
+                <i class="fas fa-phone"></i>
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero min-h-[40vh] bg-gradient-to-r from-primary to-secondary">
+        <div class="hero-content text-center">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-bold text-base-100 mb-6">Get In Touch</h1>
+                <p class="text-xl text-base-100">We'd love to hear from you! Schedule a meet-and-greet or ask us anything.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Section -->
+    <section class="py-12 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Phone -->
+                <div class="card bg-base-200 shadow-lg">
+                    <div class="card-body items-center text-center">
+                        <i class="fas fa-phone text-4xl text-primary mb-4"></i>
+                        <h3 class="card-title">Call Us</h3>
+                        <a href="tel:555-123-4567" class="link link-primary text-lg">(555) 123-4567</a>
+                        <p class="text-sm mt-2">Mon-Fri: 7am-8pm<br>Sat-Sun: 8am-6pm</p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="card bg-base-200 shadow-lg">
+                    <div class="card-body items-center text-center">
+                        <i class="fas fa-envelope text-4xl text-secondary mb-4"></i>
+                        <h3 class="card-title">Email Us</h3>
+                        <a href="mailto:hello@arlospetcare.com" class="link link-secondary text-lg">hello@arlospetcare.com</a>
+                        <p class="text-sm mt-2">We respond within<br>24 hours</p>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="card bg-base-200 shadow-lg">
+                    <div class="card-body items-center text-center">
+                        <i class="fas fa-map-marker-alt text-4xl text-accent mb-4"></i>
+                        <h3 class="card-title">Visit Us</h3>
+                        <p class="text-lg">123 Pet Lane<br>Metro City, ST 12345</p>
+                        <p class="text-sm mt-2">By appointment<br>only</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-base-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Send Us a Message</h2>
+                <p class="text-lg">Fill out the form below and we'll get back to you within 24 hours</p>
+            </div>
+            
+            <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <!-- Netlify Form -->
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-4">
+                        <!-- Honeypot field (hidden from users, catches bots) -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div style="display: none;">
+                            <label>
+                                Don't fill this out if you're human: 
+                                <input name="bot-field" />
+                            </label>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">Your Name *</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                placeholder="John Doe" 
+                                class="input input-bordered w-full" 
+                                required 
+                            />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">Email Address *</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder="john@example.com" 
+                                class="input input-bordered w-full" 
+                                required 
+                            />
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">Phone Number *</span>
+                            </label>
+                            <input 
+                                type="tel" 
+                                name="phone" 
+                                placeholder="(555) 123-4567" 
+                                class="input input-bordered w-full" 
+                                required 
+                            />
+                        </div>
+
+                        <!-- Pet Type -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">Pet Type *</span>
+                            </label>
+                            <select name="pet-type" class="select select-bordered w-full" required>
+                                <option disabled selected>Select your pet type</option>
+                                <option>Dog</option>
+                                <option>Cat</option>
+                                <option>Both Dog & Cat</option>
+                                <option>Small Animal (rabbit, guinea pig, etc.)</option>
+                                <option>Bird</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Services Interested -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">Services You're Interested In</span>
+                            </label>
+                            <div class="space-y-2">
+                                <label class="label cursor-pointer justify-start gap-4">
+                                    <input type="checkbox" name="service-walking" value="Dog Walking" class="checkbox checkbox-primary" />
+                                    <span class="label-text">Dog Walking</span>
+                                </label>
+                                <label class="label cursor-pointer justify-start gap-4">
+                                    <input type="checkbox" name="service-dropin" value="Drop-In Visits" class="checkbox checkbox-primary" />
+                                    <span class="label-text">Drop-In Visits</span>
+                                </label>
+                                <label class="label cursor-pointer justify-start gap-4">
+                                    <input type="checkbox" name="service-boarding" value="Overnight Boarding" class="checkbox checkbox-primary" />
+                                    <span class="label-text">Overnight Boarding</span>
+                                </label>
+                                <label class="label cursor-pointer justify-start gap-4">
+                                    <input type="checkbox" name="service-grooming" value="Grooming" class="checkbox checkbox-primary" />
+                                    <span class="label-text">Grooming</span>
+                                </label>
+                                <label class="label cursor-pointer justify-start gap-4">
+                                    <input type="checkbox" name="service-transport" value="Pet Transportation" class="checkbox checkbox-primary" />
+                                    <span class="label-text">Pet Transportation</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Preferred Contact Method -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">Preferred Contact Method</span>
+                            </label>
+                            <div class="flex gap-4">
+                                <label class="label cursor-pointer gap-2">
+                                    <input type="radio" name="contact-method" value="Phone" class="radio radio-primary" checked />
+                                    <span class="label-text">Phone</span>
+                                </label>
+                                <label class="label cursor-pointer gap-2">
+                                    <input type="radio" name="contact-method" value="Email" class="radio radio-primary" />
+                                    <span class="label-text">Email</span>
+                                </label>
+                                <label class="label cursor-pointer gap-2">
+                                    <input type="radio" name="contact-method" value="Either" class="radio radio-primary" />
+                                    <span class="label-text">Either</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">Message</span>
+                            </label>
+                            <textarea 
+                                name="message" 
+                                class="textarea textarea-bordered h-32" 
+                                placeholder="Tell us about your pet, your needs, or any questions you have..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-control mt-6">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </div>
+
+                        <p class="text-sm text-center opacity-70 mt-4">
+                            By submitting this form, you agree to receive communications from Arlo's Pet Care.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Service Area</h2>
+                <p class="text-lg">Proudly serving the Greater Metro Area</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Placeholder map image - replace with actual embedded map -->
+                <div class="rounded-lg overflow-hidden shadow-xl">
+                    <img 
+                        src="https://via.placeholder.com/1200x500/10b981/ffffff?text=Service+Area+Map+%7C+Replace+with+Google+Maps+Embed" 
+                        alt="Service area map" 
+                        class="w-full"
+                    />
+                </div>
+                <!-- To use real Google Maps, replace the img tag above with an iframe embed:
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-lg shadow-xl">
+                </iframe>
+                -->
+                
+                <div class="mt-8 text-center">
+                    <p class="text-lg mb-4">
+                        <strong>Service Radius:</strong> We serve neighborhoods within 15 miles of downtown Metro City
+                    </p>
+                    <p class="text-lg">
+                        Not sure if we serve your area? 
+                        <a href="tel:555-123-4567" class="link link-primary">Give us a call</a> 
+                        and we'll let you know!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact Section -->
+    <section class="py-12 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="alert alert-warning max-w-4xl mx-auto">
+                <i class="fas fa-exclamation-triangle text-2xl"></i>
+                <div>
+                    <h3 class="font-bold text-lg">Emergency Pet Care</h3>
+                    <div class="text-sm">
+                        For urgent same-day bookings or pet emergencies during business hours, please call us directly at 
+                        <a href="tel:555-123-4567" class="link link-primary font-bold">(555) 123-4567</a>. 
+                        For after-hours emergencies, contact your local 24/7 emergency veterinary hospital.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Links -->
+    <section class="py-20 bg-base-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Before You Reach Out</h2>
+                <p class="text-lg">Quick answers to common questions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card bg-base-200">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg">
+                            <i class="fas fa-question-circle text-primary"></i>
+                            Frequently Asked Questions
+                        </h3>
+                        <p>Find answers to common questions about our services, pricing, and policies.</p>
+                        <div class="card-actions">
+                            <a href="index.html#faq" class="btn btn-primary btn-sm">View FAQ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg">
+                            <i class="fas fa-tag text-secondary"></i>
+                            Services & Pricing
+                        </h3>
+                        <p>Explore our full range of services and transparent pricing options.</p>
+                        <div class="card-actions">
+                            <a href="services.html" class="btn btn-secondary btn-sm">View Services</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg">
+                            <i class="fas fa-users text-accent"></i>
+                            Meet Our Team
+                        </h3>
+                        <p>Learn about our experienced, certified pet care professionals.</p>
+                        <div class="card-actions">
+                            <a href="about.html" class="btn btn-accent btn-sm">About Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-200">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg">
+                            <i class="fas fa-calendar-check text-primary"></i>
+                            First-Time Clients
+                        </h3>
+                        <p>New here? Get 25% off your first service with code HELLO25!</p>
+                        <div class="card-actions">
+                            <span class="badge badge-success badge-lg">25% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <div>
+            <div class="text-3xl mb-4">
+                <i class="fas fa-paw text-primary"></i>
+            </div>
+            <p class="font-bold text-xl">Arlo's Pet Care</p>
+            <p>Professional, loving care for your furry family since 2018</p>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <p><i class="fas fa-phone text-primary"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope text-primary"></i> hello@arlospetcare.com</p>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a href="https://facebook.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4 text-sm">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright © 2024 - All rights reserved by Arlo's Pet Care</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
