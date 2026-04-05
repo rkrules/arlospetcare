@@ -175,8 +175,8 @@ To use custom brand colors, edit `styles/custom.css`:
    - Update `src` attributes in HTML
 
 2. **Contact Information:**
-   - Search for `(555) 123-4567` and replace
-   - Search for `hello@arlospetcare.com` and replace
+   - Search for `(203) 984-0297` and replace
+   - Search for `Arlospetcareservicesllc@gmail.com` and replace
    - Update `123 Pet Lane, Metro City` with real address
 
 3. **Business Details:**
@@ -271,6 +271,6 @@ Built with love for pets and their humans by the Arlo's Pet Care team.
 
 ---
 
-**Questions?** Contact us at hello@arlospetcare.com or call (555) 123-4567
+**Questions?** Contact us at Arlospetcareservicesllc@gmail.com or call (203) 984-0297
 
 🐾 Made with ❤️ for furry friends everywhere
