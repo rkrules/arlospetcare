@@ -6,27 +6,6 @@
  * 2. Only add custom overrides here if needed
  */
 
-/* Custom theme colors (uncomment and modify as needed) */
-/*
-@layer components {
-  .btn-primary {
-    @apply bg-[#10b981] hover:bg-[#059669] border-[#10b981] text-white;
-  }
-  
-  .btn-secondary {
-    @apply bg-[#3b82f6] hover:bg-[#2563eb] border-[#3b82f6] text-white;
-  }
-  
-  .btn-accent {
-    @apply bg-[#f59e0b] hover:bg-[#d97706] border-[#f59e0b] text-white;
-  }
-  
-  .hero {
-    @apply bg-gradient-to-r from-[#10b981] to-[#3b82f6];
-  }
-}
-*/
-
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
