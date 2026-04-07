@@ -262,119 +262,48 @@
                 </div>
 
                 <style>
-                    .testimonial-avatar {
-                        width: 56px;
-                        height: 56px;
-                        border-radius: 50%;
-                        object-fit: cover;
-                        flex-shrink: 0;
-                        border: 2px solid oklch(var(--p));
+                    .testimonials-grid {
+                        columns: 1;
+                        column-gap: 1.5rem;
+                    }
+                    @media (min-width: 640px) { .testimonials-grid { columns: 2; } }
+                    @media (min-width: 1024px) { .testimonials-grid { columns: 4; } }
+                    .testimonial-card {
+                        break-inside: avoid;
+                        margin-bottom: 1.5rem;
+                    }
+                    .testimonial-card img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        border-radius: 0.75rem;
                     }
                 </style>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial1.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial1.png" alt="Pet parent review" />
                     </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial2.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial2.png" alt="Pet parent review" />
                     </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial3.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial3.png" alt="Pet parent review" />
                     </div>
-
-                    <!-- Testimonial 4 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial4.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial4.png" alt="Pet parent review" />
                     </div>
-
-                    <!-- Testimonial 5 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial5.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial5.png" alt="Pet parent review" />
                     </div>
-
-                    <!-- Testimonial 6 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial6.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial6.png" alt="Pet parent review" />
                     </div>
-
-                    <!-- Testimonial 7 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial7.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial7.png" alt="Pet parent review" />
                     </div>
-
-                    <!-- Testimonial 8 -->
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-1 text-warning mb-3">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="mb-4 text-sm leading-relaxed">placeholder</p>
-                            <div class="flex items-center gap-3 mt-auto">
-                                <img src="assets/images/testimonial8.png" alt="Happy pet parent" class="testimonial-avatar" />
-                            </div>
-                        </div>
+                    <div class="testimonial-card shadow-lg rounded-xl overflow-hidden bg-base-100">
+                        <img src="assets/images/testimonial8.png" alt="Pet parent review" />
                     </div>
                 </div>
             </div>
