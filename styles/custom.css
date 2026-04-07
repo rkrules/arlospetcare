@@ -102,7 +102,7 @@ select:focus-visible {
 /* Custom loading spinner (if needed) */
 .loading-custom {
   border: 2px solid #f3f3f3;
-  border-top: 2px solid #10b981;
+  border-top: 2px solid currentColor;
   border-radius: 50%;
   width: 24px;
   height: 24px;
