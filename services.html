@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="emerald">
-    <!-- 🎨 THEME SWITCHER: Change "emerald" to any DaisyUI theme -->
 
     <head>
         <meta charset="UTF-8">
@@ -8,6 +7,11 @@
         <meta name="description"
             content="Comprehensive pet care services including dog walking, pet sitting, overnight stays, drop-in visits, transportation, and waste removal. Serving Hartford, West Hartford, Avon, and West Simsbury.">
         <title>Services & Pricing - Arlo's Pet Care</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
         <!-- Tailwind CSS + DaisyUI via CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -18,6 +22,184 @@
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+
+            h1, h2, h3 {
+                font-family: 'Lora', serif;
+            }
+
+            /* Alternating warm cream backgrounds */
+            .bg-cream {
+                background-color: #FAF7F2;
+            }
+
+            /* Large watermark service numbers */
+            .svc-num {
+                font-family: 'Lora', serif;
+                font-size: 9rem;
+                font-weight: 700;
+                line-height: 1;
+                color: currentColor;
+                opacity: 0.06;
+                position: absolute;
+                top: -1.5rem;
+                left: -1rem;
+                pointer-events: none;
+                user-select: none;
+                letter-spacing: -0.05em;
+            }
+
+            /* Icon circles */
+            .icon-circle {
+                width: 4.5rem;
+                height: 4.5rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            /* Section label (e.g., "SERVICE 01") */
+            .svc-label {
+                font-family: 'Nunito', sans-serif;
+                font-size: 0.7rem;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                font-weight: 800;
+                opacity: 0.45;
+                margin-bottom: 0.5rem;
+                display: block;
+            }
+
+            /* Refined includes card */
+            .includes-card {
+                background: white;
+                border-radius: 1.5rem;
+                box-shadow: 0 6px 40px rgba(0, 0, 0, 0.07);
+                padding: 2rem;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .includes-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 5px;
+                height: 100%;
+                border-radius: 5px 0 0 5px;
+            }
+
+            .includes-card.accent-primary::before { background: oklch(59.22% 0.198 148.04); }
+            .includes-card.accent-secondary::before { background: oklch(74.22% 0.149 195.44); }
+            .includes-card.accent-accent::before { background: oklch(77.69% 0.178 66.65); }
+
+            .includes-card h3 {
+                font-family: 'Lora', serif;
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 1.25rem;
+            }
+
+            /* Walk duration pills */
+            .duration-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.4rem;
+                padding: 0.5rem 1.1rem;
+                border-radius: 9999px;
+                font-weight: 700;
+                font-size: 0.875rem;
+                border: 2px solid;
+                transition: all 0.2s ease;
+                cursor: default;
+            }
+
+            .duration-pill:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            }
+
+            /* Transport option cards */
+            .transport-card {
+                border-radius: 1rem;
+                padding: 1.5rem;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                border: 1px solid rgba(0,0,0,0.06);
+            }
+
+            .transport-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Hero paw pattern overlay */
+            .hero-paws {
+                background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='40' cy='25' r='7'/%3E%3Ccircle cx='24' cy='35' r='5'/%3E%3Ccircle cx='56' cy='35' r='5'/%3E%3Ccircle cx='30' cy='28' r='4'/%3E%3Ccircle cx='50' cy='28' r='4'/%3E%3Cellipse cx='40' cy='52' rx='13' ry='10'/%3E%3C/g%3E%3C/svg%3E");
+            }
+
+            /* Section divider line */
+            .svc-divider {
+                width: 3rem;
+                height: 3px;
+                border-radius: 9999px;
+                margin-bottom: 1.25rem;
+            }
+
+            /* Feature list items */
+            .feature-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+                padding: 0.5rem 0;
+            }
+
+            .feature-item i {
+                margin-top: 3px;
+                flex-shrink: 0;
+            }
+
+            /* Includes list in card */
+            .includes-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+                padding: 0.625rem 0;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                font-size: 0.95rem;
+            }
+
+            .includes-list li:last-child {
+                border-bottom: none;
+            }
+
+            .includes-list li i {
+                margin-top: 3px;
+                flex-shrink: 0;
+                width: 1rem;
+                text-align: center;
+            }
+
+            /* Playdate session pill */
+            .session-pill {
+                padding: 0.75rem 1.5rem;
+                border-radius: 1rem;
+                text-align: center;
+                font-weight: 700;
+                font-size: 0.9rem;
+                transition: all 0.2s;
+            }
+
+            .session-pill:hover {
+                transform: translateY(-2px);
+            }
+        </style>
     </head>
 
     <body>
@@ -64,349 +246,463 @@
         </div>
 
         <!-- Hero Section -->
-        <div class="hero min-h-[50vh] bg-gradient-to-r from-primary to-secondary">
+        <div class="hero min-h-[50vh] bg-gradient-to-br from-primary to-secondary hero-paws">
             <div class="hero-content text-center">
                 <div class="max-w-3xl">
-                    <h1 class="text-5xl font-bold text-base-100 mb-6">Services & Pricing</h1>
-                    <p class="text-xl text-base-100">Professional Connecticut pet care services with transparent pricing
-                        and personalized plans</p>
+                    <p class="svc-label text-base-100 mb-3" style="opacity:0.6; font-size:0.75rem;">What we offer</p>
+                    <h1 class="text-5xl font-bold text-base-100 mb-6" style="font-family:'Lora',serif;">Our Services</h1>
+                    <p class="text-xl text-base-100" style="opacity:0.9;">Tailored, compassionate pet care for families across Hartford, West Hartford, Avon &amp; West Simsbury</p>
                 </div>
             </div>
         </div>
 
-        <!-- Dog Walking Section -->
-        <section class="py-20 bg-base-100" id="dog-walking">
+        <!-- ── 01 · DOG WALKING ────────────────────────────────────────
+             Layout: content LEFT  |  card RIGHT
+             Background: white
+        ─────────────────────────────────────────────────────────────── -->
+        <section class="py-24 bg-base-100" id="dog-walking">
             <div class="container mx-auto px-4 max-w-6xl">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <i class="fas fa-walking text-5xl text-primary"></i>
-                            <h2 class="text-4xl font-bold">Dog Walking</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left: content -->
+                    <div class="relative">
+                        <span class="svc-num text-primary">01</span>
+                        <span class="svc-label text-primary">Service 01</span>
+                        <div class="svc-divider bg-primary"></div>
+
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="icon-circle bg-primary/10">
+                                <i class="fas fa-walking text-2xl text-primary"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold leading-tight">Dog Walking</h2>
                         </div>
-                        <p class="text-lg mb-6">
-                            Professional dog walking services tailored to your pup's energy level and needs. Every walk
-                            includes photo updates and a detailed report card.
+
+                        <p class="text-base-content/70 text-lg mb-8 leading-relaxed">
+                            Professional walks tailored to your pup's energy level. Every walk includes photo updates
+                            and a personalized report card — so you always know how your dog is doing.
                         </p>
 
-                        <div class="space-y-4 mb-6">
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>20-Minute Walk:</strong> Quick potty break or low-energy dogs
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>30-Minute Walk:</strong> Balanced daily exercise
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>45-Minute Walk*:</strong> Great for active dogs who need extra time to
-                                    explore (schedule in advance)
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>60-Minute Walk*:</strong> Extended adventure time for high-energy pups
-                                    (schedule in advance)
-                                </div>
-                            </div>
+                        <p class="font-bold text-sm mb-4 tracking-wide uppercase text-base-content/50">Walk durations</p>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="duration-pill border-primary/30 text-primary bg-primary/5">
+                                <i class="fas fa-clock text-xs"></i> 20 min
+                            </span>
+                            <span class="duration-pill border-primary/30 text-primary bg-primary/5">
+                                <i class="fas fa-clock text-xs"></i> 30 min
+                            </span>
+                            <span class="duration-pill border-primary/50 text-primary bg-primary/10">
+                                <i class="fas fa-clock text-xs"></i> 45 min *
+                            </span>
+                            <span class="duration-pill border-primary/50 text-primary bg-primary/10">
+                                <i class="fas fa-clock text-xs"></i> 60 min *
+                            </span>
                         </div>
-
+                        <p class="text-xs text-base-content/40 mb-2">* 45 &amp; 60 min walks require advance scheduling</p>
+                        <p class="text-xs text-base-content/40">Pricing determined by number of dogs &amp; reactivity level</p>
                     </div>
+
+                    <!-- Right: includes card -->
                     <div>
-                        <div class="card bg-base-200 shadow-xl">
-                            <div class="card-body">
-                                <h3 class="card-title text-2xl mb-4">What's Included:</h3>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-camera text-primary mt-1"></i>
-                                        <span>Photo updates and personalized report card</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-water text-primary mt-1"></i>
-                                        <span>Fresh water provided during walks</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-poop text-primary mt-1"></i>
-                                        <span>Waste cleanup included</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-trash text-primary mt-1"></i>
-                                        <span>Yard waste removal available: one-time, weekly, bi-weekly, or
-                                            monthly</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-soap text-primary mt-1"></i>
-                                        <span>Paw wipe-down before returning home</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-home text-primary mt-1"></i>
-                                        <span>Home security check (plants watered, mail retrieved)</span>
-                                    </li>
-                                </ul>
-                                <div class="card-actions justify-end mt-6">
-                                    <a href="contact.html" class="btn btn-primary btn-block">Book Dog Walking</a>
-                                </div>
-                            </div>
+                        <div class="includes-card accent-primary">
+                            <h3>What's Included</h3>
+                            <ul class="includes-list">
+                                <li>
+                                    <i class="fas fa-camera text-primary"></i>
+                                    <span>Photo updates &amp; personalized report card</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-water text-primary"></i>
+                                    <span>Fresh water provided during every walk</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-poop text-primary"></i>
+                                    <span>Waste cleanup included</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-soap text-primary"></i>
+                                    <span>Paw wipe-down before returning home</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-home text-primary"></i>
+                                    <span>Home security check — plants watered, mail retrieved</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-trash text-primary"></i>
+                                    <span>Yard waste removal available (one-time, weekly, bi-weekly, or monthly)</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary btn-block mt-6">Book Dog Walking</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pet Sitting Section -->
-        <section class="py-20 bg-base-100" id="boarding">
+        <!-- ── 02 · PET SITTING ───────────────────────────────────────
+             Layout: card LEFT  |  content RIGHT   ← alternated
+             Background: warm cream
+        ─────────────────────────────────────────────────────────────── -->
+        <section class="py-24 bg-cream" id="boarding">
             <div class="container mx-auto px-4 max-w-6xl">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <i class="fas fa-moon text-5xl text-accent"></i>
-                            <h2 class="text-4xl font-bold">Pet Sitting (with and without Overnight)</h2>
-                        </div>
-                        <p class="text-lg mb-6">
-                            Pet stays in the comfort of their own home.
-                        </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                        <div class="space-y-4 mb-6">
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>With Overnight Stay:</strong> Includes services listed in "What's Included"
-                                    plus overnight supervision, bedtime routine, and morning care
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>Without Overnight Stay:</strong> Includes services listed in "What's
-                                    Included" but no overnight supervision.
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>Senior Animals </strong>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-success text-xl mt-1"></i>
-                                <div>
-                                    <strong>Reactive animals</strong>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div>
-                        <div class="card bg-base-200 shadow-xl">
-                            <div class="card-body">
-                                <h3 class="card-title text-2xl mb-4">What's Included:</h3>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-bed text-accent mt-1"></i>
-                                        <span>4 visits daily which include feeding, walks, play time, snuggles</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-pills text-accent mt-1"></i>
-                                        <span>Medication administration</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-camera text-accent mt-1"></i>
-                                        <span>Daily photo and video updates</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-shield-alt text-accent mt-1"></i>
-                                        <span>Supervision and care</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-heart text-accent mt-1"></i>
-                                        <span>Lots of love, cuddles, and attention</span>
-                                    </li>
-                                </ul>
-
-                                <div class="card-actions justify-end mt-6">
-                                    <a href="contact.html" class="btn btn-primary btn-block">Book Pet Sitting</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Drop-In Visits Section -->
-        <section class="py-20 bg-base-200" id="drop-in">
-            <div class="container mx-auto px-4 max-w-6xl">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left: includes card -->
                     <div class="order-2 lg:order-1">
-                        <div class="card bg-base-100 shadow-xl">
-                            <div class="card-body">
-                                <h3 class="card-title text-2xl mb-4">What's Included:</h3>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-utensils text-secondary mt-1"></i>
-                                        <span>Simple package: Take pet out to potty, refresh water</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-gamepad text-secondary mt-1"></i>
-                                        <span>Regular package: Take pet out to potty, refresh water, playtime</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-box text-secondary mt-1"></i>
-                                        <span>Litter box cleaning or waste pickup</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-pills text-secondary mt-1"></i>
-                                        <span>Medication administration (no extra charge)</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-seedling text-secondary mt-1"></i>
-                                        <span>Plant watering and mail collection</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i class="fas fa-camera text-secondary mt-1"></i>
-                                        <span>Photo updates and visit confirmation</span>
-                                    </li>
-                                </ul>
-                                <div class="card-actions justify-end mt-6">
-                                    <a href="contact.html" class="btn btn-primary btn-block">Book Drop-In Visit</a>
+                        <div class="includes-card accent-accent">
+                            <h3>What's Included</h3>
+                            <ul class="includes-list">
+                                <li>
+                                    <i class="fas fa-bed text-accent"></i>
+                                    <span>4 visits daily — feeding, walks, play time &amp; snuggles</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-pills text-accent"></i>
+                                    <span>Medication administration</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-camera text-accent"></i>
+                                    <span>Daily photo &amp; video updates</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-shield-alt text-accent"></i>
+                                    <span>Attentive supervision &amp; care throughout</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart text-accent"></i>
+                                    <span>Lots of love, cuddles &amp; attention</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary btn-block mt-6">Book Pet Sitting</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: content -->
+                    <div class="relative order-1 lg:order-2">
+                        <span class="svc-num text-accent">02</span>
+                        <span class="svc-label text-accent">Service 02</span>
+                        <div class="svc-divider bg-accent"></div>
+
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="icon-circle bg-accent/10">
+                                <i class="fas fa-moon text-2xl text-accent"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold leading-tight">Pet Sitting</h2>
+                        </div>
+
+                        <p class="text-base-content/70 text-lg mb-8 leading-relaxed">
+                            Your pet stays in the comfort of their own home. We come to them — so their routine, their
+                            space, and their sense of security stays intact.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle text-success text-lg"></i>
+                                <div>
+                                    <strong>With Overnight:</strong> All included services plus overnight supervision,
+                                    bedtime routine &amp; morning care
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle text-success text-lg"></i>
+                                <div>
+                                    <strong>Without Overnight:</strong> All included services, daytime care only — no
+                                    overnight supervision
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle text-success text-lg"></i>
+                                <div>
+                                    <strong>Senior Animals</strong> — experienced, patient care for older pets
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle text-success text-lg"></i>
+                                <div>
+                                    <strong>Reactive Animals</strong> — Jenny's specialty; compassionate handling for
+                                    pets that need extra patience
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="order-1 lg:order-2">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i class="fas fa-home text-5xl text-secondary"></i>
-                            <h2 class="text-4xl font-bold">Drop-In Visits</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 03 · DROP-IN VISITS ────────────────────────────────────
+             Layout: content LEFT  |  card RIGHT
+             Background: white
+        ─────────────────────────────────────────────────────────────── -->
+        <section class="py-24 bg-base-100" id="drop-in">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left: content -->
+                    <div class="relative">
+                        <span class="svc-num text-secondary">03</span>
+                        <span class="svc-label text-secondary">Service 03</span>
+                        <div class="svc-divider bg-secondary"></div>
+
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="icon-circle bg-secondary/10">
+                                <i class="fas fa-door-open text-2xl text-secondary"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold leading-tight">Drop-In Visits</h2>
                         </div>
-                        <p class="text-lg mb-6">
-                            Perfect for cats, small pets, or dogs who prefer staying home. We'll visit your home to
-                            provide care, companionship, and peace of mind while you're away.
+
+                        <p class="text-base-content/70 text-lg mb-8 leading-relaxed">
+                            Perfect for cats, small pets, or dogs who prefer the comfort of home. We stop in, check on
+                            them, and give them the care and company they deserve while you're out.
                         </p>
 
+                        <div class="space-y-4">
+                            <div class="bg-secondary/5 rounded-xl p-4 border border-secondary/20">
+                                <p class="font-bold text-secondary mb-1">Simple Visit</p>
+                                <p class="text-sm text-base-content/70">Take pet out to potty, refresh water — quick and caring</p>
+                            </div>
+                            <div class="bg-secondary/10 rounded-xl p-4 border border-secondary/30">
+                                <p class="font-bold text-secondary mb-1">Regular Visit</p>
+                                <p class="text-sm text-base-content/70">Potty break, refresh water, plus 10–15 minutes of play &amp; snuggles</p>
+                            </div>
+                        </div>
+                    </div>
 
-
+                    <!-- Right: includes card -->
+                    <div>
+                        <div class="includes-card accent-secondary">
+                            <h3>What's Included</h3>
+                            <ul class="includes-list">
+                                <li>
+                                    <i class="fas fa-paw text-secondary"></i>
+                                    <span>Potty break or outdoor time</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-gamepad text-secondary"></i>
+                                    <span>Playtime &amp; snuggles (regular package)</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-box text-secondary"></i>
+                                    <span>Litter box cleaning or waste pickup</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-pills text-secondary"></i>
+                                    <span>Medication administration — no extra charge</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-seedling text-secondary"></i>
+                                    <span>Plant watering &amp; mail collection</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-camera text-secondary"></i>
+                                    <span>Photo updates &amp; visit confirmation</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary btn-block mt-6">Book Drop-In Visit</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pet Transportation Section -->
-        <section class="py-20 bg-base-100" id="transportation">
+        <!-- ── 04 · DOG TRANSPORTATION ───────────────────────────────
+             Layout: cards LEFT  |  content RIGHT   ← alternated
+             Background: warm cream
+        ─────────────────────────────────────────────────────────────── -->
+        <section class="py-24 bg-cream" id="transportation">
             <div class="container mx-auto px-4 max-w-6xl">
-                <div class="text-center mb-12">
-                    <div class="flex items-center justify-center gap-3 mb-4">
-                        <i class="fas fa-car text-5xl text-secondary"></i>
-                        <h2 class="text-4xl font-bold">Pet Transportation</h2>
-                    </div>
-                    <p class="text-lg">Safe, comfortable rides for your pet wherever they need to go</p>
-                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card bg-base-200 shadow-xl">
-                        <div class="card-body">
-                            <h3 class="card-title">Vet Appointments</h3>
-                            <p>Door-to-door service to veterinary appointments. We'll wait with your pet and bring them
-                                home safely.</p>
-                            <div class="divider"></div>
-                            <p class="text-2xl font-bold text-secondary">$35 per trip</p>
-                            <p class="text-sm">(within 10 miles, +$2/mile beyond)</p>
+                    <!-- Left: transport option cards -->
+                    <div class="order-2 lg:order-1 space-y-4">
+                        <div class="transport-card bg-white">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="icon-circle bg-secondary/10" style="width:2.75rem;height:2.75rem;">
+                                    <i class="fas fa-stethoscope text-secondary"></i>
+                                </div>
+                                <h4 class="font-bold text-lg" style="font-family:'Lora',serif;">Vet Appointments</h4>
+                            </div>
+                            <p class="text-base-content/70 text-sm mb-3">Door-to-door service. We'll wait with your pet and bring them home safely.</p>
+                            <p class="font-bold text-secondary">$35 per trip <span class="text-xs font-normal text-base-content/40">within 10 miles, +$2/mile beyond</span></p>
+                        </div>
+
+                        <div class="transport-card bg-white">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="icon-circle bg-secondary/10" style="width:2.75rem;height:2.75rem;">
+                                    <i class="fas fa-scissors text-secondary"></i>
+                                </div>
+                                <h4 class="font-bold text-lg" style="font-family:'Lora',serif;">Grooming &amp; Daycare</h4>
+                            </div>
+                            <p class="text-base-content/70 text-sm mb-3">Pickup and drop-off for grooming appointments, doggy daycare, or other pet errands.</p>
+                            <p class="font-bold text-secondary">$30 per trip <span class="text-xs font-normal text-base-content/40">within 10 miles, +$2/mile beyond</span></p>
+                        </div>
+
+                        <div class="transport-card bg-white">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="icon-circle bg-secondary/10" style="width:2.75rem;height:2.75rem;">
+                                    <i class="fas fa-ambulance text-secondary"></i>
+                                </div>
+                                <h4 class="font-bold text-lg" style="font-family:'Lora',serif;">Emergency Transport</h4>
+                            </div>
+                            <p class="text-base-content/70 text-sm mb-3">24/7 emergency transport to veterinary hospitals when every minute counts.</p>
+                            <p class="font-bold text-secondary">Price varies <span class="text-xs font-normal text-base-content/40">priority response, any distance</span></p>
                         </div>
                     </div>
 
-                    <div class="card bg-base-200 shadow-xl">
-                        <div class="card-body">
-                            <h3 class="card-title">Grooming & Daycare</h3>
-                            <p>Pickup and drop-off service for grooming appointments, doggy daycare, or other
-                                pet-related destinations.</p>
-                            <div class="divider"></div>
-                            <p class="text-2xl font-bold text-secondary">$30 per trip</p>
-                            <p class="text-sm">(within 10 miles, +$2/mile beyond)</p>
+                    <!-- Right: content -->
+                    <div class="relative order-1 lg:order-2">
+                        <span class="svc-num text-secondary">04</span>
+                        <span class="svc-label text-secondary">Service 04</span>
+                        <div class="svc-divider bg-secondary"></div>
+
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="icon-circle bg-secondary/10">
+                                <i class="fas fa-car text-2xl text-secondary"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold leading-tight">Dog Transportation</h2>
                         </div>
-                    </div>
 
-                    <div class="card bg-base-200 shadow-xl">
-                        <div class="card-body">
-                            <h3 class="card-title">Emergency Transport</h3>
-                            <p>24/7 emergency transportation to veterinary hospitals when every minute counts.</p>
-                            <div class="divider"></div>
-                            <p class="text-2xl font-bold text-secondary">Price varies</p>
-                            <p class="text-sm">(priority response, any distance)</p>
+                        <p class="text-base-content/70 text-lg mb-6 leading-relaxed">
+                            Safe, comfortable rides for your pet — wherever they need to go. We take the stress out of
+                            getting your dog to their appointment and back home.
+                        </p>
+
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-check-circle text-success text-lg"></i>
+                            <span>Calm, experienced handling during transport</span>
                         </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-check-circle text-success text-lg"></i>
+                            <span>Photo updates along the way</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-check-circle text-success text-lg"></i>
+                            <span>Door-to-door service — no drop-off required</span>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary mt-6">Book Transportation</a>
                     </div>
-
-
                 </div>
             </div>
         </section>
 
-        <!-- Dog Taxi & Playdate Section -->
-        <section class="py-20 bg-base-200" id="taxi-playdates">
+        <!-- ── 05 · DOGGY PLAYDATES ──────────────────────────────────
+             Layout: content LEFT  |  sessions RIGHT
+             Background: white
+        ─────────────────────────────────────────────────────────────── -->
+        <section class="py-24 bg-base-100" id="playdates">
             <div class="container mx-auto px-4 max-w-6xl">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold mb-4">Dog Taxi & Playdates</h2>
-                    <p class="text-lg">Flexible transportation and social play sessions designed for Connecticut pets
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-3 mb-4">
-                                <i class="fas fa-car text-5xl text-secondary"></i>
-                                <h3 class="card-title">Dog Taxi Service</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left: content -->
+                    <div class="relative">
+                        <span class="svc-num text-primary">05</span>
+                        <span class="svc-label text-primary">Service 05</span>
+                        <div class="svc-divider bg-primary"></div>
+
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="icon-circle bg-primary/10">
+                                <i class="fas fa-dog text-2xl text-primary"></i>
                             </div>
-                            <p>Safe pickup and drop-off for vet visits, grooming appointments, daycare, or any pet
-                                errand. We keep your pet comfortable, calm, and on schedule.</p>
-                            <div class="divider"></div>
-                            <ul class="space-y-3">
-                                <li>• Vet appointment transportation</li>
-                                <li>• Grooming & daycare drop-off</li>
-                                <li>• Airport or relocation assistance</li>
-                                <li>• Door-to-door service with photo updates</li>
-                            </ul>
-                            <p class="mt-4 font-semibold">From $35 per trip within 10 miles</p>
+                            <h2 class="text-4xl font-bold leading-tight">Doggy Playdates</h2>
+                        </div>
+
+                        <p class="text-base-content/70 text-lg mb-8 leading-relaxed">
+                            For the most social butterfly pups. Whether hosted in your home, a dog friend's home, or a
+                            nearby park — your dog gets to run, play, and enjoy some quality canine time with a buddy of
+                            their choice.
+                        </p>
+
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-check-circle text-success text-lg"></i>
+                            <span>Supervised, safe introductions</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-check-circle text-success text-lg"></i>
+                            <span>Hosted at your home, a friend's, or the park</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-check-circle text-success text-lg"></i>
+                            <span>Photo updates throughout the session</span>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary mt-6">Book a Playdate</a>
+                    </div>
+
+                    <!-- Right: session options -->
+                    <div>
+                        <div class="includes-card accent-primary">
+                            <h3>Session Lengths</h3>
+                            <div class="space-y-3 mt-4">
+                                <div class="flex items-center gap-4 py-3 border-b border-base-200">
+                                    <div class="icon-circle bg-primary/10" style="width:3rem;height:3rem;">
+                                        <i class="fas fa-clock text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold">30-Minute Playdate</p>
+                                        <p class="text-sm text-base-content/60">Quick social burst — great for younger pups</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 py-3 border-b border-base-200">
+                                    <div class="icon-circle bg-primary/15" style="width:3rem;height:3rem;">
+                                        <i class="fas fa-clock text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold">45-Minute Playdate</p>
+                                        <p class="text-sm text-base-content/60">The sweet spot for most social dogs</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 py-3">
+                                    <div class="icon-circle bg-primary/20" style="width:3rem;height:3rem;">
+                                        <i class="fas fa-clock text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold">60-Minute Playdate</p>
+                                        <p class="text-sm text-base-content/60">Full session for high-energy pups who need it</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <div class="flex items-center gap-3 mb-4">
-                                <i class="fas fa-dog text-5xl text-primary"></i>
-                                <h3 class="card-title">Doggy Playdates</h3>
-                            </div>
-                            <p>Perfect for social pups who love playtime with a trusted friend. Choose a private visit
-                                at your home, a friend's house, or a nearby park.</p>
-                            <div class="divider"></div>
-                            <ul class="space-y-3">
-                                <li>• 30-minute playdate</li>
-                                <li>• 45-minute playdate</li>
-                                <li>• 60-minute playdate</li>
-                                <li>• Safe, supervised introductions with your chosen buddy</li>
-                            </ul>
-                            <p class="mt-4 font-semibold">Starting at $30 per session</p>
-                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 06 · WASTE REMOVAL ─────────────────────────────────────
+             Callout banner — warm cream
+        ─────────────────────────────────────────────────────────────── -->
+        <section class="py-16 bg-cream" id="waste-removal">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="bg-white rounded-2xl shadow-md p-10 flex flex-col lg:flex-row items-center gap-8">
+                    <div class="icon-circle bg-primary/10 flex-shrink-0" style="width:5rem;height:5rem;">
+                        <i class="fas fa-trash-alt text-2xl text-primary"></i>
+                    </div>
+                    <div class="flex-1 text-center lg:text-left">
+                        <span class="svc-label text-primary" style="opacity:1;">Also available</span>
+                        <h2 class="text-3xl font-bold mb-3" style="font-family:'Lora',serif;">Yard Waste Removal</h2>
+                        <p class="text-base-content/70 text-lg leading-relaxed">
+                            Available for all families — pet sitting client or not. One-time, weekly, bi-weekly, or
+                            monthly scheduling. Pricing varies by yard size and number of dogs.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Get a Quote</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <section class="py-20 bg-gradient-to-br from-primary to-secondary hero-paws">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold mb-4 text-base-100">Ready to Get Started?</h2>
-                <p class="text-xl mb-8 text-base-100">Book your first service today and see why pet parents love us!</p>
+                <p class="svc-label text-base-100 mb-4" style="opacity:0.6;">Let's get started</p>
+                <h2 class="text-4xl font-bold mb-4 text-base-100" style="font-family:'Lora',serif;">Ready to Book?</h2>
+                <p class="text-xl mb-8 text-base-100" style="opacity:0.9;">Schedule a free meet-and-greet and let us get to know your pet.</p>
                 <div class="flex gap-4 justify-center flex-wrap">
                     <a href="contact.html" class="btn btn-accent btn-lg">
                         <i class="fas fa-calendar-check"></i>
                         Book Now
                     </a>
                     <a href="index.html#faq"
-                        class="btn btn-outline btn-lg text-base-100 hover:bg-base-100 hover:text-primary">
+                        class="btn btn-outline btn-lg text-base-100 hover:bg-base-100 hover:text-primary border-base-100/50">
                         <i class="fas fa-question-circle"></i>
                         Have Questions?
                     </a>
